@@ -1,0 +1,17 @@
+@mixin text-style($ff, $fs, $fw, $color, $tt) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+    text-transform: $tt;
+}
+
+@mixin circle-block($size, $color) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color;
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+@import '_mixins.scss';
+
+$font: 'Raleway', sans-serif;
+
+.services-list {
+    width: 803px;
+    margin: 0 auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .services-item {
+        
+        margin-bottom: 18px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        
+
+        &.disabled {
+            .services-item-body {
+                display: none;
+            }
+        }
+
+        .services-item-head {
+            height: 50px;
+            display: flex;
+            padding: 0 25px 0 25px;
+            align-items: center;
+            justify-content: space-between;
+            
+
+            .service-head-name {
+                @include text-style(
+                    $font,
+                    15px,
+                    700,
+                    #061e37,
+                    uppercase
+                );
+                flex-grow: 0.9;
+                margin-left: -15px;
+            }
+
+            .service-head-arrow {
+                height: 7px;
+            }
+        }
+
+        .services-item-body {
+            padding: 0 0 25px 25px;
+
+            .service-body-text {
+                float: right;
+                width: 469px;
+                @include text-style(
+                    $font,
+                    15px,
+                    400,
+                    #061e37,
+                    none
+                );
+                line-height: 1.7;
+            }
+        }
+    }
+}

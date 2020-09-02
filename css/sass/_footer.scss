@@ -1,0 +1,90 @@
+
+
+.footer {
+    background-color: #061e37;
+    padding-bottom: 110px;
+        .footer-head {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 95px;
+            margin-bottom: 55px;
+
+            .head-logo {
+                width: 190px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                
+                
+                .logo-text {
+                    width: 150px;
+                    p {
+                        @include text-style(
+                            $font,
+                            15px,
+                            900,
+                            #ffffff,
+                            uppercase
+                        );
+                    }
+                    .first-line {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .head-nav {
+                width: 445px;
+                display: flex;
+                align-items: center;
+                justify-self: end;
+
+                .head-link {
+                    margin-left: 50px;
+                    a {
+                        text-decoration: none;
+                        @include text-style(
+                            $font,
+                            15px,
+                            600,
+                            #ffffff,
+                            none
+                        );
+                    }
+                }
+
+                .head-link:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .footer-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .footer-body-links {
+                display: flex;
+                align-self: end;
+
+                li {
+                    color: #ffffff;
+                    font-family: Raleway;
+                    font-size: 15px;
+                    font-weight: 400;
+                    list-style: disc;
+                    margin-left: 44px;
+                }
+
+                & li:first-child {
+                    margin-left: 0;
+                    list-style: none;
+                }
+            }
+
+            .social-icons {
+                justify-self: end;
+            }
+        }
+}

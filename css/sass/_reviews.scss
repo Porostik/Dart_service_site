@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+
+@import '_mixins.scss';
+
+$font: 'Raleway', sans-serif;
+
+.reviews {
+    background: url('/img/reviews/bc.png') center no-repeat;
+    background-size: 100%;
+    position: relative;
+    
+}
+
+.reviews-casting {
+    position: absolute;
+    background-color: #1de9b6;
+    background-image: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%);
+    opacity: 0.95;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews-body {
+    display: grid;
+    grid-template-columns: 36% 63%;
+    grid-template-areas: 'content slider';
+    text-align: left;
+
+    .reviews-content {
+        grid-area: content;
+        margin-top: 130px;
+
+        .reviews-title{
+            @include text-style(
+                $font,
+                45px,
+                600,
+                #ffffff,
+                none
+            );
+            
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .reviews-text {
+            @include text-style(
+                $font,
+                15px,
+                400,
+                #ffffff,
+                none
+            );
+
+            line-height: 1.5;
+            margin-bottom: 80px;
+        }
+
+        .reviews-button {
+            @include text-style(
+                $font,
+                15px,
+                700,
+                #061e37,
+                uppercase
+            );
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #ffffff;
+            padding: 20px 28px;
+            transition: all .2s linear;
+        }
+
+        .reviews-button:hover {
+            color: #ffffff;
+            background-color: #061e37;
+        }
+    }
+}   
+
+.slider-reviews {
+    grid-area: slider;
+    justify-self: end;
+    margin: 50px 0 40px 0;
+    width: 800px;
+    height: 487px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider-reviews .slick-arrow {
+    position: relative;
+    z-index: 50;
+    font-size: 0;
+    width: 25px;
+    height: 16px;
+    border: none;
+}
+
+.slider-reviews .slick-arrow:focus {
+    outline: none;
+}
+
+.slider-reviews .slick-arrow.slick-next{
+    background: url('/img/reviews/arrow_up.png') 0 0 / 100% no-repeat;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+}
+
+.slider-reviews .slick-arrow.slick-prev{
+    background: url('/img/reviews/arrow_down.png') 0 0 / 100% no-repeat;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+}
+
+.slider-reviews .slider-item {
+    font-size: 18px;
+    color: wheat;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;  
+}
+
+.slider-reviews .slider-item:focus {
+    outline: none;
+}
+
+.slider-reviews .img-box {
+    width: 100px;
+}
+
+.slider-reviews .slider-text {
+    width: 650px;
+    height: 165px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    padding-right: 65px;  
+}
+
+.slider-reviews .slider-title {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #061e37;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.slider-reviews .slider-body {
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    color: #78909c;
+    line-height: 1.7;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.slider-reviews .slick-slide {
+    height: 160px;
+    margin-bottom: 60px;
+}
+
+.slider-reviews .slick-list {
+    overflow: hidden;
+}
+
+.slider-reviews .slick-track {
+    margin-top: 25px;
+    width: 800px;
+    height: 390px;
+}
